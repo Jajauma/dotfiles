@@ -1,0 +1,5 @@
+{{- $pass := promptString "password" -}}
+encryption = "gpg"
+[gpg]
+    symmetric = true
+    args = ["--batch", "--passphrase", {{ $pass | quote }}, "--no-symkey-cache"]

@@ -1,0 +1,11 @@
+$include  /etc/inputrc
+
+# Use single Tab key
+set show-all-if-ambiguous on
+
+# Search history using beginning of line (PgUp/PgDn)
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# Omit hidden entries
+set match-hidden-files off

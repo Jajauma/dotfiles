@@ -1,0 +1,14 @@
+[user]
+	name = Jajauma's GitHub
+	email = jajauma@2ch.hk
+
+[core]
+	editor = vim
+	autocrlf = input
+
+[pull]
+	ff = only
+
+[merge "keepassxc-cli-merge"]
+	name = Merge KeePassXC databases
+	driver = keepassxc-cli merge %A %B

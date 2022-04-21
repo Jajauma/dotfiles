@@ -1,0 +1,4 @@
+{{ if eq .chezmoi.os "windows" -}}
+reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Iosevka Term Medium (TrueType)" /t REG_SZ /d "%USERPROFILE%\.fonts\iosevka-term-medium.ttf" /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Iosevka Term Semibold (TrueType)" /t REG_SZ /d "%USERPROFILE%\.fonts\iosevka-term-semibold.ttf" /f
+{{ end -}}

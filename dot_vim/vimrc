@@ -1,0 +1,61 @@
+if &compatible
+    set nocompatible
+endif
+
+let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+
+" Relocate state files to persistent directory
+let s:tmp_path = glob(s:vimfiles_path . '/tmp')
+let &viminfo .= ',n' . s:tmp_path . '/viminfo'
+let &directory = s:tmp_path . '//'
+
+" Initialize automatically managed plugins
+let s:plugged_path = glob(s:vimfiles_path . '/plugged')
+call plug#begin(s:plugged_path)
+Plug 'PProvost/vim-ps1'
+Plug 'morhetz/gruvbox'
+Plug 'rhysd/vim-clang-format', {'for': ['c','cpp']}
+Plug 'stephpy/vim-yaml', {'for': 'yaml'}
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/Rename'
+call plug#end()
+
+if &t_Co > 2 || has('gui_running')
+    syntax on
+endif
+
+filetype plugin indent on
+set autoindent
+set formatoptions=tcqj
+set history=10000
+set hlsearch
+set incsearch
+set laststatus=2
+set ttyfast
+set expandtab shiftwidth=4
+set nowrapscan
+set relativenumber
+set showcmd
+set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
+set encoding=utf8
+set fileformats=unix,dos
+set list
+set listchars=tab:»\ ,trail:·
+set modeline
+set visualbell t_vb=
+if has('autocmd') && has('gui_running')
+      autocmd GUIEnter * set t_vb=
+endif
+" Possibly helps with slow leave from insert mode
+set noesckeys
+
+" reset search highlight
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+" saner search (n always jumps forward, N always jump backwards)
+nnoremap <expr> n 'Nn'[v:searchforward]
+nnoremap <expr> N 'nN'[v:searchforward]
+" quick save
+nnoremap <silent> <F2> :update<CR>
+" quickfix navigation
+nnoremap <F7> :cprevious<CR>
+nnoremap <F8> :cnext<CR>

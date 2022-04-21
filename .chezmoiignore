@@ -1,0 +1,7 @@
+README.md
+{{- if eq .chezmoi.os "windows" }}
+.mkshrc
+{{- else }}
+AppData
+vimfiles
+{{- end }}

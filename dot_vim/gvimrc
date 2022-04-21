@@ -1,0 +1,18 @@
+if has("win32")
+    set guifont=Iosevka_Term_Semibold:h11
+else
+    set guifont=Iosevka\ Term\ Semi-Bold\ 12
+endif
+
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+set guioptions-=m
+set guioptions+=!
+
+if strftime('%H') >= 7 && strftime('%H') < 19
+    set background=light
+else
+    set background=dark
+endif
+colorscheme gruvbox
