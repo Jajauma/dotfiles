@@ -1,17 +1,14 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+6"
-        }
-    ],
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "disabledProfileSources": 
     [
-        "Windows.Terminal.Azure"
+        "Windows.Terminal.Azure",
+        "Windows.Terminal.Wsl"
     ],
     "profiles": 
     {
@@ -30,18 +27,16 @@
         "list": 
         [
             {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Default PowerShell"
-            },
-            {
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "Default CMD"
-            },
-            {
-                "guid": "{f184b75f-6c82-5ea5-9b3e-3203d66c5f82}",
                 "hidden": false,
-                "name": "Ubuntu20.04LTS",
-                "source": "Windows.Terminal.Wsl"
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
             },
             {
                 "commandline": "%PROGRAMFILES%/Git/usr/bin/bash.exe -i -l",
@@ -50,6 +45,18 @@
                 "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
                 "name": "Git Bash",
                 "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{5a069d55-87bd-57cf-8a07-2726b203d3e5}",
+                "hidden": false,
+                "name": "Ubuntu 20.04 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{60c3e313-8e1a-58f6-8175-3650c2bd2b26}",
+                "hidden": false,
+                "name": "Ubuntu 22.04 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             }
         ]
     },
@@ -278,7 +285,7 @@
             "cyan": "#3A96DD",
             "foreground": "#FFFFFF",
             "green": "#26A269",
-            "name": "Ubuntu20.04LTSColorScheme",
+            "name": "Ubuntu-22.04-ColorScheme",
             "purple": "#881798",
             "red": "#C21A23",
             "selectionBackground": "#FFFFFF",
