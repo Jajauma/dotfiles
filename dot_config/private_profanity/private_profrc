@@ -16,3 +16,4 @@ titlebar.position=3
 mainwin.position=2
 statusbar.position=1
 inputwin.position=4
+vercheck=false
