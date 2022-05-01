@@ -17,3 +17,6 @@ mainwin.position=2
 statusbar.position=1
 inputwin.position=4
 vercheck=false
+
+[muc]
+bookmark.invite=false
