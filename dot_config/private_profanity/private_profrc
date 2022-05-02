@@ -17,6 +17,9 @@ mainwin.position=2
 statusbar.position=1
 inputwin.position=4
 vercheck=false
+console.muc=mention
+console.chat=first
+console.private=first
 
 [muc]
 bookmark.invite=false
