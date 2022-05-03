@@ -21,6 +21,7 @@ vercheck=false
 console.muc=mention
 console.chat=first
 console.private=first
+wintitle.show=true
 
 [muc]
 bookmark.invite=false
