@@ -9,6 +9,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     append_path "$HOME/.local/bin"
 fi
 
+# compact versions of \u ($USER) and \h ($HOSTNAME)
+my_user=$(id -un)
+my_user=${my_user%%@*}
+my_hostname=$(hostname)
+my_hostname=${my_hostname%%.*}
+
 export EDITOR=vim
 export HGEDITOR=$EDITOR
 export VISUAL=$EDITOR

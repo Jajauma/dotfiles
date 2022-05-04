@@ -13,9 +13,7 @@ __format_ps1_last_error() {
 
 HISTFILE=$HOME/.mksh_history
 HISTSIZE=100000
-PS1="[\${USER:=$(id -un)}@\${HOSTNAME:=$(hostname)} \
-\$(__format_ps1_cwd)\
-\$(__format_ps1_last_error)]\$ "
+PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error)]\$ "
 
 bind '^L=clear-screen'
 
