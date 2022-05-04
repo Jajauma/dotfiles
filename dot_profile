@@ -14,6 +14,7 @@ my_user=$(id -un)
 my_user=${my_user%%@*}
 my_hostname=$(hostname)
 my_hostname=${my_hostname%%.*}
+export my_user my_hostname
 
 export EDITOR=vim
 export HGEDITOR=$EDITOR
