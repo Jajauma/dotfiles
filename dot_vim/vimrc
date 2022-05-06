@@ -17,6 +17,7 @@ Plug 'morhetz/gruvbox'
 Plug 'rhysd/vim-clang-format', {'for': ['c','cpp']}
 Plug 'stephpy/vim-yaml', {'for': 'yaml'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/Rename'
 call plug#end()
 
