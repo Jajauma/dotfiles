@@ -15,4 +15,6 @@ if strftime('%H') >= 7 && strftime('%H') < 19
 else
     set background=dark
 endif
+
+let g:gruvbox_italic = '0'
 colorscheme gruvbox
