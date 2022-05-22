@@ -9,6 +9,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     append_path "$HOME/.local/bin"
 fi
 
+# experimenting with pkgsrc
+if [ -d "$HOME/pkg" ] ; then
+    append_path "$HOME/pkg/sbin"
+    append_path "$HOME/pkg/bin"
+    export MANPATH=$(manpath -g):$HOME/pkg/man
+fi
+
 # compact versions of \u ($USER) and \h ($HOSTNAME)
 my_user=$(id -un)
 my_user=${my_user%%@*}
