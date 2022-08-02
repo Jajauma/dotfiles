@@ -5,9 +5,8 @@ append_path() {
     esac;
 }
 
-if [ -d "$HOME/.local/bin" ] ; then
-    append_path "$HOME/.local/bin"
-fi
+[ -d "$HOME/.local/bin" ] && append_path "$HOME/.local/bin"
+[ -d "$HOME/.cargo/bin" ] && append_path "$HOME/.cargo/bin"
 
 # experimenting with pkgsrc
 [ -d "$HOME/pkg/sbin" ] && append_path "$HOME/pkg/sbin"
