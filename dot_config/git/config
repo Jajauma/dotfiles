@@ -9,6 +9,9 @@
 [pull]
 	ff = only
 
+[push]
+	autoSetupRemote = true
+
 [merge "keepassxc-cli-merge"]
 	name = Merge KeePassXC databases
 	driver = keepassxc-cli merge %A %B
