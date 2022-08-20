@@ -23,7 +23,6 @@ export my_user my_hostname
 export EDITOR=vim
 export HGEDITOR=$EDITOR
 export VISUAL=$EDITOR
-export LESSHISTFILE=/dev/null
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
