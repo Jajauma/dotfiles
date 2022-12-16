@@ -12,6 +12,7 @@
         "Windows.Terminal.PowershellCore",
         "Windows.Terminal.VisualStudio"
     ],
+    "launchMode": "maximized",
     "profiles": 
     {
         "defaults": 
