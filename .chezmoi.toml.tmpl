@@ -1,8 +1,14 @@
 {{- $pass := promptString "password" -}}
 encryption = "gpg"
+
 [gpg]
-    symmetric = true
-    args = ["--batch",
-            "--passphrase", {{ $pass | quote }},
-            "--no-symkey-cache",
-            "--quiet"]
+symmetric = true
+args = ["--batch",
+        "--passphrase", {{ $pass | quote }},
+        "--no-symkey-cache",
+        "--quiet"]
+
+{{ if eq .chezmoi.os "windows" -}}
+[edit]
+command = "C:/Program Files/Git/usr/bin/vim.exe"
+{{ end -}}
