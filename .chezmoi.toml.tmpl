@@ -8,7 +8,10 @@ args = ["--batch",
         "--no-symkey-cache",
         "--quiet"]
 
-{{ if eq .chezmoi.os "windows" -}}
+{{ if eq .chezmoi.os "windows" }}
 [edit]
 command = "C:/Program Files/Git/usr/bin/vim.exe"
-{{ end -}}
+
+[merge]
+command = "C:/Program Files/Git/usr/bin/vimdiff.exe"
+{{ end }}
