@@ -8,11 +8,6 @@ append_path() {
 [ -d "$HOME/.local/bin" ] && append_path "$HOME/.local/bin"
 [ -d "$HOME/.cargo/bin" ] && append_path "$HOME/.cargo/bin"
 
-# experimenting with pkgsrc
-[ -d "$HOME/pkg/sbin" ] && append_path "$HOME/pkg/sbin"
-[ -d "$HOME/pkg/bin" ] && append_path "$HOME/pkg/bin"
-[ -d "$HOME/pkg/man" ] && export MANPATH=$(manpath -g):$HOME/pkg/man
-
 # compact versions of \u ($USER) and \h ($HOSTNAME)
 my_user=$(id -un)
 my_user=${my_user%%@*}
