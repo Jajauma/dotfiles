@@ -50,7 +50,7 @@ endif
 " Possibly helps with slow leave from insert mode
 set noesckeys
 if has('win32')
-    set shell=pwsh
+    set shell=pwsh\ -nologo
 endif
 
 " reset search highlight
