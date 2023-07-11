@@ -51,10 +51,14 @@ endif
 set noesckeys
 
 " :terminal configuration and workaround
-if has('win32')
-    set shell=pwsh\ -nologo
-    " fix erasing words with Ctrl+BackSpace
-    tmap <expr> <C-BS> SendToTerm("\<C-W>")
+if has('terminal')
+    if has('win32') && executable('pwsh')
+        set shell=pwsh\ -nologo
+        " fix erase last word with Ctrl+BackSpace
+        tmap <expr> <C-BS> SendToTerm("\<C-W>")
+        " fix cancel line with Ctrl+C
+        tmap <expr> <C-C> SendToTerm("\<C-A>\<Del>")
+    endif
     func SendToTerm(what)
         call term_sendkeys('', a:what)
         return ''
