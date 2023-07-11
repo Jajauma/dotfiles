@@ -45,10 +45,13 @@ set listchars=tab:»\ ,trail:·
 set modeline
 set visualbell t_vb=
 if has('autocmd') && has('gui_running')
-      autocmd GUIEnter * set t_vb=
+    autocmd GUIEnter * set t_vb=
 endif
 " Possibly helps with slow leave from insert mode
 set noesckeys
+if has('win32')
+    set shell=pwsh
+endif
 
 " reset search highlight
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
