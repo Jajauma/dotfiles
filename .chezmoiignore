@@ -1,6 +1,7 @@
 README.md
 {{- if eq .chezmoi.os "windows" }}
 .mkshrc
+.tmux.conf
 {{- else }}
 vimfiles
 {{- end }}
