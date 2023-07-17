@@ -4,4 +4,5 @@ README.md
 .tmux.conf
 {{- else }}
 vimfiles
+Documents/PowerShell
 {{- end }}

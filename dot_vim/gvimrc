@@ -10,7 +10,7 @@ set guioptions-=L
 set guioptions-=m
 set guioptions+=!
 
-if strftime('%H') >= 7 && strftime('%H') < 19
+if strftime('%H') >= 9 && strftime('%H') < 18
     set background=light
 else
     set background=dark
@@ -18,3 +18,7 @@ endif
 
 let g:gruvbox_italic = '0'
 colorscheme gruvbox
+
+if has('terminal')
+    hi Terminal guibg=background guifg=foreground
+endif
