@@ -41,7 +41,8 @@ set noesckeys
 " :terminal configuration and workarounds
 if has('terminal')
     if has('win32') && executable('pwsh')
-        set shell=pwsh\ -nologo
+        nnoremap <silent> <leader>t :term ++close pwsh -nologo<CR>
+        nnoremap <silent> <leader>T :vert term ++close pwsh -nologo<CR>
         " fix erase last word with Ctrl+BackSpace
         tmap <expr> <C-BS> SendToTerm("\<C-W>")
         " fix cancel line with Ctrl+C
