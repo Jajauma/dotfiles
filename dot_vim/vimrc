@@ -9,18 +9,6 @@ let s:tmp_path = glob(s:vimfiles_path . '/tmp')
 let &viminfo .= ',n' . s:tmp_path . '/viminfo'
 let &directory = s:tmp_path . '//'
 
-" Initialize automatically managed plugins
-let s:plugged_path = glob(s:vimfiles_path . '/plugged')
-call plug#begin(s:plugged_path)
-Plug 'PProvost/vim-ps1'
-Plug 'morhetz/gruvbox'
-Plug 'rhysd/vim-clang-format', {'for': ['c','cpp']}
-Plug 'stephpy/vim-yaml', {'for': 'yaml'}
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/Rename'
-call plug#end()
-
 if &t_Co > 2 || has('gui_running')
     syntax on
 endif
