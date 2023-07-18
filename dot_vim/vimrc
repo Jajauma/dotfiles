@@ -38,7 +38,7 @@ endif
 " Possibly helps with slow leave from insert mode
 set noesckeys
 
-" :terminal configuration and workaround
+" :terminal configuration and workarounds
 if has('terminal')
     if has('win32') && executable('pwsh')
         set shell=pwsh\ -nologo
@@ -46,6 +46,8 @@ if has('terminal')
         tmap <expr> <C-BS> SendToTerm("\<C-W>")
         " fix cancel line with Ctrl+C
         tmap <expr> <C-C> SendToTerm("\<C-A>\<Del>")
+        " fix typing occasional Shift+Space
+        tmap <expr> <S-Space> SendToTerm("\<Space>")
     endif
     func SendToTerm(what)
         call term_sendkeys('', a:what)
