@@ -5,7 +5,6 @@ encryption = "gpg"
 symmetric = true
 args = ["--batch",
         "--passphrase", {{ $pass | quote }},
-        "--no-symkey-cache",
         "--quiet"]
 
 {{ if eq .chezmoi.os "windows" }}
