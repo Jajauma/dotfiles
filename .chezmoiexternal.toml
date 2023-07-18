@@ -1,0 +1,17 @@
+[".vim/pack/colors/start/gruvbox"]
+type = "archive"
+url = "https://github.com/morhetz/gruvbox/archive/bf2885a95efdad7bd5e4794dd0213917770d79b7.tar.gz"
+checksum.sha256 = "712bfbb0e74c5790ad5d083bf5d60b720e2ec8da4bc7ac1881f1dbcace18ebce"
+stripComponents = 1
+
+[".vim/pack/tools/start/vim-commentary"]
+type = "archive"
+url = "https://github.com/tpope/vim-commentary/archive/e87cd90dc09c2a203e13af9704bd0ef79303d755.tar.gz"
+checksum.sha256 = "c65989b64f90b95c8475ad814ecc1bb3c360058b5f89725d8ead39db66c0cd75"
+stripComponents = 1
+
+[".vim/pack/tools/opt/vim-clang-format"]
+type = "archive"
+url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
+checksum.sha256 = "864ff2ede3b5f4f4935c86d2c5082ae80992c433321005940c4d3da8f42b92e9"
+stripComponents = 1

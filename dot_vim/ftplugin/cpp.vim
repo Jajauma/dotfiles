@@ -3,6 +3,7 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
+packadd vim-clang-format
 setlocal commentstring=//\ %s
 nnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
 vnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
