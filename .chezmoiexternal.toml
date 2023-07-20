@@ -15,3 +15,9 @@ type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
 checksum.sha256 = "864ff2ede3b5f4f4935c86d2c5082ae80992c433321005940c4d3da8f42b92e9"
 stripComponents = 1
+
+[".vim/pack/tools/opt/a.vim"]
+type = "archive"
+url = "https://github.com/Jajauma/a.vim/archive/668b7b9ac1b772d9c6e2a6aa39ec5965e3abb2cc.tar.gz"
+checksum.sha256 = "AC0B77D803D6CDA49AF21AB9162CDA4F68503D795B7788E5C5BD123FF2780965"
+stripComponents = 1

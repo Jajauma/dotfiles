@@ -3,10 +3,18 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
-if has('packages')
-    packadd vim-clang-format
-    nnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
-    vnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
+setlocal commentstring=//\ %s
+
+if !has('packages')
+    finish
 endif
 
-setlocal commentstring=//\ %s
+packadd a.vim
+let g:alternateNoDefaultAlternate = 1
+unmap <Leader>ih
+unmap <Leader>is
+unmap <Leader>ihn
+
+packadd vim-clang-format
+nnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
+vnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
