@@ -19,5 +19,5 @@ stripComponents = 1
 [".vim/pack/tools/opt/a.vim"]
 type = "archive"
 url = "https://github.com/Jajauma/a.vim/archive/668b7b9ac1b772d9c6e2a6aa39ec5965e3abb2cc.tar.gz"
-checksum.sha256 = "AC0B77D803D6CDA49AF21AB9162CDA4F68503D795B7788E5C5BD123FF2780965"
+checksum.sha256 = "ac0b77d803d6cda49af21ab9162cda4f68503d795b7788e5c5bd123ff2780965"
 stripComponents = 1
