@@ -3,6 +3,7 @@ README.md
 .mkshrc
 .tmux.conf
 {{- else }}
-vimfiles
+AppData
 Documents/PowerShell
+vimfiles
 {{- end }}
