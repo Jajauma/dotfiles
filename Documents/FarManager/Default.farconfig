@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<farconfig version="3.0.6116">
+    <generalconfig>
+        <setting key="Editor" name="ExternalEditorName" type="text" value="gvim.exe &quot;!.!&quot;"/>
+        <setting key="Editor" name="UseExternalEditor" type="qword" value="0000000000000001"/>
+        <setting key="Screen" name="Clock" type="qword" value="0000000000000000"/>
+        <setting key="System" name="AutoSaveSetup" type="qword" value="0000000000000001"/>
+        <setting key="System.Executor" name="~" type="text" value="%USERPROFILE%"/>
+    </generalconfig>
+</farconfig>

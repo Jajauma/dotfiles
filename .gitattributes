@@ -1,1 +1,2 @@
 *.kdbx merge=keepassxc-cli-merge
+Documents/FarManager/Default.farconfig text eol=crlf

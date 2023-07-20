@@ -4,6 +4,7 @@ README.md
 .tmux.conf
 {{- else }}
 AppData
+Documents/FarManager
 Documents/PowerShell
 vimfiles
 {{- end }}
