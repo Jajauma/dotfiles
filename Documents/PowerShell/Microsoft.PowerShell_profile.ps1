@@ -6,3 +6,6 @@ Set-PSReadLineOption -Colors @{
   String   = "`e[91m" # Bright Red
   Variable = "`e[94m" # Bright Blue
 }
+
+# Faster exit using Ctrl+D
+Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteCharOrExit
