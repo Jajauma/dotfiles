@@ -1,5 +1,3 @@
-& "$env:USERPROFILE\Documents\pyuserapps\Scripts\activate.ps1"
-
 # Override only some colors so they work best with vim terminal.
 Set-PSReadLineOption -Colors @{
   Command  = "`e[35m" # Magenta
