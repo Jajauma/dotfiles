@@ -10,6 +10,12 @@ url = "https://github.com/tpope/vim-commentary/archive/e87cd90dc09c2a203e13af970
 checksum.sha256 = "c65989b64f90b95c8475ad814ecc1bb3c360058b5f89725d8ead39db66c0cd75"
 stripComponents = 1
 
+[".vim/pack/tools/start/vim-rooter"]
+type = "archive"
+url = "https://github.com/airblade/vim-rooter/archive/4f52ca556a0b9e257bf920658714470ea0320b7a.tar.gz"
+checksum.sha256 = "5ebeeee8c4e85d8c1e4fc7bd568927a9e4a4e398d9e364227bc62058cceb6da1"
+stripComponents = 1
+
 [".vim/pack/tools/opt/vim-clang-format"]
 type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
