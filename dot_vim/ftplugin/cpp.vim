@@ -11,9 +11,10 @@ endif
 
 packadd a.vim
 let g:alternateNoDefaultAlternate = 1
-unmap <Leader>ih
-unmap <Leader>is
-unmap <Leader>ihn
+" undo stock mappings from a.vim
+silent! unmap <Leader>ih
+silent! unmap <Leader>is
+silent! unmap <Leader>ihn
 
 packadd vim-clang-format
 nnoremap <buffer> <silent> <LocalLeader>f :ClangFormat<CR>
