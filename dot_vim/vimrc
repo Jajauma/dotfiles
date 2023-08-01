@@ -70,3 +70,5 @@ nnoremap <silent> <F2> :update<CR>
 " quickfix navigation
 nnoremap <F7> :cprevious<CR>
 nnoremap <F8> :cnext<CR>
+" fix accidental :E to be :e
+cnoreabbrev E e
