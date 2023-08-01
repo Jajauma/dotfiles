@@ -45,8 +45,6 @@ if has('terminal')
         nnoremap <silent> <leader>T :vert term ++close pwsh -nologo<CR>
         " fix erase last word with Ctrl+BackSpace
         tmap <expr> <C-BS> SendToTerm("\<C-W>")
-        " fix cancel line with Ctrl+C
-        tmap <expr> <C-C> SendToTerm("\<C-A>\<Del>")
         " fix typing occasional Shift+Space
         tmap <expr> <S-Space> SendToTerm("\<Space>")
     endif
