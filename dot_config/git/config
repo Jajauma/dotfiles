@@ -12,6 +12,10 @@
 [push]
 	autoSetupRemote = true
 
+[gui]
+	fontdiff = -family Consolas -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	encoding = utf-8
+
 [merge "keepassxc-cli-merge"]
 	name = Merge KeePassXC databases
 	driver = keepassxc-cli merge %A %B
