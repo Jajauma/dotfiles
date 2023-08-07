@@ -16,6 +16,12 @@ url = "https://github.com/airblade/vim-rooter/archive/4f52ca556a0b9e257bf9206587
 checksum.sha256 = "5ebeeee8c4e85d8c1e4fc7bd568927a9e4a4e398d9e364227bc62058cceb6da1"
 stripComponents = 1
 
+[".vim/pack/tools/start/vim-eunuch"]
+type = "archive"
+url = "https://github.com/tpope/vim-eunuch/archive/67f3dd32b4dcd1c427085f42ff5f29c7adc645c6.tar.gz"
+checksum.sha256 = "1cbbccc632c7876f91148967e7f0975b948ced9a2b7cc3ae1708cc3f1d15a8aa"
+stripComponents = 1
+
 [".vim/pack/tools/opt/vim-clang-format"]
 type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
