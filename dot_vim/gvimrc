@@ -9,6 +9,7 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=m
 set guioptions+=!
+set t_vb=
 
 if strftime('%H') >= 9 && strftime('%H') < 18
     set background=light
