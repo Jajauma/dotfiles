@@ -1,7 +1,7 @@
-[".vim/pack/colors/start/gruvbox"]
+[".vim/pack/colors/start/gruvbox8"]
 type = "archive"
-url = "https://github.com/morhetz/gruvbox/archive/bf2885a95efdad7bd5e4794dd0213917770d79b7.tar.gz"
-checksum.sha256 = "712bfbb0e74c5790ad5d083bf5d60b720e2ec8da4bc7ac1881f1dbcace18ebce"
+url = "https://github.com/lifepillar/vim-gruvbox8/archive/8a634bd8d7539eb645e23147516d6c3054e71306.tar.gz"
+checksum.sha256 = "8783fd5083b2eec095fc7145ad081fdc5580c38ef96d388aaf0537062c715d9e"
 stripComponents = 1
 
 [".vim/pack/tools/start/vim-commentary"]

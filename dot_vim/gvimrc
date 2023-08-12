@@ -16,9 +16,4 @@ else
     set background=dark
 endif
 
-let g:gruvbox_italic = '0'
-colorscheme gruvbox
-
-if has('terminal')
-    hi Terminal guibg=background guifg=foreground
-endif
+colorscheme gruvbox8
