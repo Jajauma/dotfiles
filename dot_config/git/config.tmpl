@@ -3,7 +3,11 @@
 	email = jajauma@2ch.hk
 
 [core]
+{{- if eq .chezmoi.os "windows" }}
+	editor = gvim --nofork --remote-wait-silent
+{{- else }}
 	editor = vim
+{{- end }}
 	autocrlf = input
 
 [pull]
