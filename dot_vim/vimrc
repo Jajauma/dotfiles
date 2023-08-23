@@ -49,10 +49,12 @@ if has('terminal')
         call term_sendkeys('', a:what)
         return ''
     endfunc
-    augroup vim_terminal
-        autocmd!
-        au TerminalWinOpen * setlocal nonumber norelativenumber
-    augroup END
+    if exists('##TerminalWinOpen')
+        augroup vim_terminal
+            autocmd!
+            au TerminalWinOpen * setlocal nonumber norelativenumber
+        augroup END
+    endif
 endif
 
 " reset search highlight
