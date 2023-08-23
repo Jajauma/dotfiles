@@ -6,5 +6,6 @@ README.md
 AppData
 Documents/FarManager
 Documents/PowerShell
+dot_minttyrc
 vimfiles
 {{- end }}
