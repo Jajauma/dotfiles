@@ -4,6 +4,14 @@ endif
 
 syn case ignore
 
+" non-escaped {/}
+syn match toxiniSubstitution "\(^{\|[^\\]{\)\zs/\ze}"
+" non-escaped {func:with:args}
+syn match toxiniSubstitution "\(^{\|[^\\]{\)\zs\w\+\ze\(:.*\)*}"
+" non-escaped {[sectionname]valuename}
+syn match toxiniSubstitution "\(^{\|[^\\]{\)\zs\[\w\+\]\w\+\ze}"
+hi def link toxiniSubstitution Type
+
 syn match toxiniComment "^\s*[#;].*$"
 hi def link toxiniComment Comment
 
