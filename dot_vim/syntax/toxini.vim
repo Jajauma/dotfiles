@@ -12,7 +12,9 @@ syn match toxiniSubstitution "\(^{\|[^\\]{\)\zs\w\+\ze\(:.*\)*}"
 syn match toxiniSubstitution "\(^{\|[^\\]{\)\zs\[\w\+\]\w\+\ze}"
 hi def link toxiniSubstitution Type
 
-syn match toxiniComment "^\s*[#;].*$"
+" comments (non-escaped # or ; anywhere in the line)
+syn match toxiniComment "\(^\zs#\|[^\\]\zs#\).*$"
+syn match toxiniComment "\(^\zs;\|[^\\]\zs;\).*$"
 hi def link toxiniComment Comment
 
 syn match toxiniLabel "^\zs\w\+\ze\s*="
