@@ -15,25 +15,25 @@ endif
 
 filetype plugin indent on
 set autoindent
+set encoding=utf8
+set expandtab shiftwidth=4
+set fileformats=unix,dos
 set formatoptions=tcqj
 set history=10000
 set hlsearch
 set incsearch
 set laststatus=2
-set ttyfast
-set expandtab shiftwidth=4
-set nowrapscan
-set relativenumber
-set showcmd
-set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
-set encoding=utf8
-set fileformats=unix,dos
 set list
 set listchars=tab:»\ ,trail:·
 set modeline
+set noesckeys " possibly helps with slow leave from insert mode
+set nowrapscan
+set relativenumber
+set shortmess-=S
+set showcmd
+set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
+set ttyfast
 set visualbell t_vb=
-" Possibly helps with slow leave from insert mode
-set noesckeys
 
 " :terminal configuration and workarounds
 if has('terminal')
