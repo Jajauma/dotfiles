@@ -5,10 +5,26 @@
         <setting key="Editor" name="ExternalEditorName" type="text" value="gvim --remote-silent &quot;!.!&quot;"/>
         <setting key="Editor" name="UseExternalEditor" type="qword" value="0000000000000001"/>
         <setting key="Interface" name="FullWidthAwareRendering" type="qword" value="0000000000000001"/>
+        <setting key="Interface" name="Mouse" type="qword" value="0000000000000000"/>
+        <setting key="Interface" name="SetIcon" type="qword" value="0000000000000001"/>
         <setting key="Panel" name="SelectFolders" type="qword" value="0000000000000001"/>
         <setting key="Panel" name="ShowHidden" type="qword" value="0000000000000000"/>
         <setting key="Screen" name="Clock" type="qword" value="0000000000000000"/>
         <setting key="System" name="AutoSaveSetup" type="qword" value="0000000000000001"/>
         <setting key="System.Executor" name="~" type="text" value="%USERPROFILE%"/>
     </generalconfig>
+    <pluginhotkeys>
+        <plugin key="742910F1-02ED-4542-851F-DEE37C2E13B2">
+            <hotkey menu="plugins" guid="C8660293-6195-4303-9A5F-A6E7F603AE12" hotkey="x" />
+        </plugin>
+    </pluginhotkeys>
+    <pluginsconfig>
+        <plugin guid="742910F1-02ED-4542-851F-DEE37C2E13B2">
+            <hierarchicalconfig>
+                <key name="742910F1-02ED-4542-851F-DEE37C2E13B2" description="EMenu">
+                    <value name="UseGUI" type="qword" value="0000000000000002" />
+                </key>
+            </hierarchicalconfig>
+        </plugin>
+    </pluginsconfig>
 </farconfig>
