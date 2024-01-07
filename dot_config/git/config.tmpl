@@ -4,7 +4,7 @@
 
 [core]
 {{- if eq .chezmoi.os "windows" }}
-	editor = gvim --nofork --remote-wait-silent
+	editor = gvim.bat --nofork --remote-wait-silent
 {{- else }}
 	editor = vim
 {{- end }}
@@ -23,6 +23,3 @@
 [merge "keepassxc-cli-merge"]
 	name = Merge KeePassXC databases
 	driver = keepassxc-cli merge %A %B
-
-[http "https://github.com"]
-	proxy = socks5h://127.0.0.1:1080
