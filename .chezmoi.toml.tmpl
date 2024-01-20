@@ -9,8 +9,8 @@ args = ["--batch",
 
 {{ if eq .chezmoi.os "windows" }}
 [edit]
-command = "C:/Program Files/Git/usr/bin/vim.exe"
+command = "gvim"
 
 [merge]
-command = "C:/Program Files/Git/usr/bin/vimdiff.exe"
+command = "gvimdiff"
 {{ end }}
