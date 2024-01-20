@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "windows" -}}
+@echo off
+setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
+setx POWERSHELL_UPDATECHECK Off >nul
+{{ end -}}
