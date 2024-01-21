@@ -69,3 +69,10 @@ nnoremap <F7> :cprevious<CR>
 nnoremap <F8> :cnext<CR>
 " fix accidental :E to be :e
 cnoreabbrev E e
+
+" insert directory of the current file in the command line
+cnoremap <C-H> <C-R>=GetCurrentFileDirectory()<CR>
+function! GetCurrentFileDirectory()
+    let expanded_result = expand('%:~:.:h')
+    return expanded_result == '' ? './' : expanded_result . '/'
+endfunction
