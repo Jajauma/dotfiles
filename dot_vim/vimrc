@@ -35,6 +35,11 @@ set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
 set ttyfast
 set visualbell t_vb=
 
+" use forward slash for path separator
+if has('win32') && exists('+shellslash')
+    set shellslash
+endif
+
 " :terminal configuration and workarounds
 if has('terminal')
     if has('win32') && executable('pwsh')
