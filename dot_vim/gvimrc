@@ -11,13 +11,16 @@ set guioptions-=m
 set guioptions+=!
 set t_vb=
 
-if strftime('%H') >= 9 && strftime('%H') < 18
-    set background=light
+if v:servername == 'FAR'
+    colorscheme blue
 else
-    set background=dark
+    if strftime('%H') >= 9 && strftime('%H') < 18
+        set background=light
+    else
+        set background=dark
+    endif
+    colorscheme gruvbox8
 endif
-
-colorscheme gruvbox8
 
 " automatically discard stale buffers from deleted files, based on
 " https://stackoverflow.com/a/8851986
