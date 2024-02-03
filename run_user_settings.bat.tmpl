@@ -1,5 +1,9 @@
 {{ if eq .chezmoi.os "windows" -}}
 @echo off
+
 setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
 setx POWERSHELL_UPDATECHECK Off >nul
+setx PYTHONSTARTUP %USERPROFILE%\Documents\python_startup.py >nul
+
+rem vim:ft=dosbatch:
 {{ end -}}

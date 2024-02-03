@@ -45,11 +45,15 @@ if has('terminal')
     if has('win32') && executable('pwsh')
         nnoremap <silent> <leader>t :term ++close pwsh -nologo<CR>
         nnoremap <silent> <leader>T :vert term ++close pwsh -nologo<CR>
-        " fix erase last word with Ctrl+BackSpace
-        tmap <expr> <C-BS> SendToTerm("\<C-W>")
-        " fix typing occasional Shift+Space
-        tmap <expr> <S-Space> SendToTerm("\<Space>")
     endif
+    if has('win32') && executable('py')
+        nnoremap <silent> <leader>p :term ++close py<CR>
+        nnoremap <silent> <leader>P :vert term ++close py<CR>
+    endif
+    " fix erase last word with Ctrl+BackSpace
+    tmap <expr> <C-BS> SendToTerm("\<C-W>")
+    " fix typing occasional Shift+Space
+    tmap <expr> <S-Space> SendToTerm("\<Space>")
     func SendToTerm(what)
         call term_sendkeys('', a:what)
         return ''

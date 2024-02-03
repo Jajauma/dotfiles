@@ -18,6 +18,7 @@ export my_user my_hostname
 export EDITOR=vim
 export HGEDITOR=$EDITOR
 export VISUAL=$EDITOR
+export PYTHONSTARTUP=$HOME/Documents/python_startup.py
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
