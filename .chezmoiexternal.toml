@@ -1,7 +1,7 @@
 [".vim/pack/colors/start/gruvbox8"]
 type = "archive"
-url = "https://github.com/lifepillar/vim-gruvbox8/archive/8a634bd8d7539eb645e23147516d6c3054e71306.tar.gz"
-checksum.sha256 = "8783fd5083b2eec095fc7145ad081fdc5580c38ef96d388aaf0537062c715d9e"
+url = "https://github.com/lifepillar/vim-gruvbox8/archive/d1cf31e5215ad6f5544d9e631383aef4b6c35cb7.zip"
+checksum.sha256 = "9CB7AA921E4E63147CB954F0383BF9EF681427002EF16FBC5193C91BB8F0FE04"
 stripComponents = 1
 
 [".vim/pack/colors/start/far"]
