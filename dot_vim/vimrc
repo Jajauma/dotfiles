@@ -43,8 +43,8 @@ endif
 " :terminal configuration and workarounds
 if has('terminal')
     if has('win32') && executable('pwsh')
-        nnoremap <silent> <leader>t :term ++close pwsh -nologo<CR>
-        nnoremap <silent> <leader>T :vert term ++close pwsh -nologo<CR>
+        nnoremap <silent> <leader>t :exe 'term ++close' fs#GetPSCommand()<CR>
+        nnoremap <silent> <leader>T :exe 'vert term ++close' fs#GetPSCommand()<CR>
     endif
     if has('win32') && executable('py')
         nnoremap <silent> <leader>p :term ++close py<CR>
@@ -80,8 +80,4 @@ nnoremap <F8> :cnext<CR>
 cnoreabbrev E e
 
 " insert directory of the current file in the command line
-cnoremap <C-H> <C-R>=GetCurrentFileDirectory()<CR>
-function! GetCurrentFileDirectory()
-    let expanded_result = expand('%:~:.:h')
-    return expanded_result == '' ? './' : expanded_result . '/'
-endfunction
+cnoremap <expr> <C-H> fs#GetParentDirPrompt()
