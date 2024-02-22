@@ -1,5 +1,5 @@
 if &compatible
-    set nocompatible
+  set nocompatible
 endif
 
 let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
@@ -10,13 +10,13 @@ let &viminfo .= ',n' . s:tmp_path . '/viminfo'
 let &directory = s:tmp_path . '//'
 
 if &t_Co > 2 || has('gui_running')
-    syntax on
+  syntax on
 endif
 
 filetype plugin indent on
 set autoindent
 set encoding=utf8
-set expandtab shiftwidth=4
+set expandtab shiftwidth=2
 set fileformats=unix,dos
 set formatoptions=tcqj
 set history=10000
@@ -37,33 +37,33 @@ set visualbell t_vb=
 
 " use forward slash for path separator
 if has('win32') && exists('+shellslash')
-    set shellslash
+  set shellslash
 endif
 
 " :terminal configuration and workarounds
 if has('terminal')
-    if has('win32') && executable('pwsh')
-        nnoremap <silent> <leader>t :exe 'term ++close' fs#GetPSCommand()<CR>
-        nnoremap <silent> <leader>T :exe 'vert term ++close' fs#GetPSCommand()<CR>
-    endif
-    if has('win32') && executable('py')
-        nnoremap <silent> <leader>p :term ++close py<CR>
-        nnoremap <silent> <leader>P :vert term ++close py<CR>
-    endif
-    " fix erase last word with Ctrl+BackSpace
-    tmap <expr> <C-BS> SendToTerm("\<C-W>")
-    " fix typing occasional Shift+Space
-    tmap <expr> <S-Space> SendToTerm("\<Space>")
-    func SendToTerm(what)
-        call term_sendkeys('', a:what)
-        return ''
-    endfunc
-    if exists('##TerminalWinOpen')
-        augroup vim_terminal
-            autocmd!
-            au TerminalWinOpen * setlocal nonumber norelativenumber
-        augroup END
-    endif
+  if has('win32') && executable('pwsh')
+    nnoremap <silent> <leader>t :exe 'term ++close' fs#GetPSCommand()<CR>
+    nnoremap <silent> <leader>T :exe 'vert term ++close' fs#GetPSCommand()<CR>
+  endif
+  if has('win32') && executable('py')
+    nnoremap <silent> <leader>p :term ++close py<CR>
+    nnoremap <silent> <leader>P :vert term ++close py<CR>
+  endif
+  " fix erase last word with Ctrl+BackSpace
+  tmap <expr> <C-BS> SendToTerm("\<C-W>")
+  " fix typing occasional Shift+Space
+  tmap <expr> <S-Space> SendToTerm("\<Space>")
+  func SendToTerm(what)
+    call term_sendkeys('', a:what)
+    return ''
+  endfunc
+  if exists('##TerminalWinOpen')
+    augroup vim_terminal
+      autocmd!
+      au TerminalWinOpen * setlocal nonumber norelativenumber
+    augroup END
+  endif
 endif
 
 " reset search highlight

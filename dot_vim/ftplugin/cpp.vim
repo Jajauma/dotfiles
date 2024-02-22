@@ -1,12 +1,12 @@
 if exists("b:did_ftplugin")
-    finish
+  finish
 endif
 let b:did_ftplugin = 1
 
 setlocal commentstring=//\ %s
 
 if !has('packages')
-    finish
+  finish
 endif
 
 packadd vim-clang-format

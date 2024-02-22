@@ -1,8 +1,8 @@
 function! fs#GetParentDirPrompt()
-    return @% == '' ? './' : expand('%:~:.:h') . '/'
+  return @% == '' ? './' : expand('%:~:.:h') . '/'
 endfunction
 
 function! fs#GetPSCommand()
-    return 'pwsh -nologo' .
+  return 'pwsh -nologo' .
         \ (@% == '' ? '' : ' -WorkingDirectory "'. expand('%:~:.:h') . '"')
 endfunction

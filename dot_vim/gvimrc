@@ -1,7 +1,7 @@
 if has("win32")
-    set guifont=Consolas:h11
+  set guifont=Consolas:h11
 else
-    set guifont=Consolas\ 11
+  set guifont=Consolas\ 11
 endif
 
 set guioptions-=T
@@ -12,28 +12,28 @@ set guioptions+=!
 set t_vb=
 
 if v:servername == 'FAR'
-    colorscheme far
+  colorscheme far
 else
-    if strftime('%H') >= 8 && strftime('%H') < 21
-        set background=light
-    else
-        set background=dark
-    endif
-    colorscheme gruvbox8
+  if strftime('%H') >= 8 && strftime('%H') < 21
+    set background=light
+  else
+    set background=dark
+  endif
+  colorscheme gruvbox8
 endif
 
 " automatically discard stale buffers from deleted files, based on
 " https://stackoverflow.com/a/8851986
 augroup auto_wipe_buffers_trick
-    autocmd!
-    au FocusGained * call s:WipeBuffersWithoutFiles()
+  autocmd!
+  au FocusGained * call s:WipeBuffersWithoutFiles()
 augroup END
 function s:WipeBuffersWithoutFiles()
-    let bufs = filter(range(1, bufnr('$')), 'bufexists(v:val) && '.
-                \'!bufloaded(v:val) && '.
-                \'empty(getbufvar(v:val, "&buftype")) && '.
-                \'!filereadable(bufname(v:val))')
-    if !empty(bufs)
-        execute 'bwipeout' join(bufs)
-    endif
+  let bufs = filter(range(1, bufnr('$')), 'bufexists(v:val) && '.
+              \'!bufloaded(v:val) && '.
+              \'empty(getbufvar(v:val, "&buftype")) && '.
+              \'!filereadable(bufname(v:val))')
+  if !empty(bufs)
+    execute 'bwipeout' join(bufs)
+  endif
 endfunction
