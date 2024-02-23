@@ -12,8 +12,8 @@ stripComponents = 1
 
 [".vim/pack/tools/start/vim-commentary"]
 type = "archive"
-url = "https://github.com/tpope/vim-commentary/archive/e87cd90dc09c2a203e13af9704bd0ef79303d755.tar.gz"
-checksum.sha256 = "c65989b64f90b95c8475ad814ecc1bb3c360058b5f89725d8ead39db66c0cd75"
+url = "https://github.com/tpope/vim-commentary/archive/f67e3e67ea516755005e6cccb178bc8439c6d402.zip"
+checksum.sha256 = "076CA240EBA7A5240871934000AE2E16ED4DC4C0CEC7731353ADFBD5F9DF41F2"
 stripComponents = 1
 
 [".vim/pack/tools/opt/vim-clang-format"]
