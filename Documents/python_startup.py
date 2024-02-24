@@ -1,3 +1,4 @@
+import math
 import sys
 
 if sys.platform == "win32":
