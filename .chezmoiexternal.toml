@@ -16,6 +16,12 @@ url = "https://github.com/tpope/vim-commentary/archive/f67e3e67ea516755005e6cccb
 checksum.sha256 = "076CA240EBA7A5240871934000AE2E16ED4DC4C0CEC7731353ADFBD5F9DF41F2"
 stripComponents = 1
 
+[".vim/pack/tools/start/vim-fugitive"]
+type = "archive"
+url = "https://github.com/tpope/vim-fugitive/archive/2e88f14a585c014691904ba8fe39e6ea851c9422.zip"
+checksum.sha256 = "C109A7B7DFBA123389F449400569F7BA139108290F360BC55D0A9B46484481B1"
+stripComponents = 1
+
 [".vim/pack/tools/opt/vim-clang-format"]
 type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
