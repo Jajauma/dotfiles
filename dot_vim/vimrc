@@ -51,13 +51,9 @@ if has('terminal')
     nnoremap <silent> <leader>P :vert term ++close py<CR>
   endif
   " fix erase last word with Ctrl+BackSpace
-  tmap <expr> <C-BS> SendToTerm("\<C-W>")
+  tmap <expr> <C-BS> functions#SendToTerm("\<C-W>")
   " fix typing occasional Shift+Space
-  tmap <expr> <S-Space> SendToTerm("\<Space>")
-  func SendToTerm(what)
-    call term_sendkeys('', a:what)
-    return ''
-  endfunc
+  tmap <expr> <S-Space> functions#SendToTerm("\<Space>")
   if exists('##TerminalWinOpen')
     augroup vim_terminal
       autocmd!

@@ -16,3 +16,8 @@ function! functions#WipeBuffersWithoutFiles()
     execute 'bwipeout' join(bufs)
   endif
 endfunction
+
+func functions#SendToTerm(what)
+  call term_sendkeys('', a:what)
+  return ''
+endfunc
