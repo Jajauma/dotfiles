@@ -19,6 +19,8 @@ else
   else
     set background=dark
   endif
+  let g:gruvbox_italicize_strings = 0
+  let g:gruvbox_italics = 0
   colorscheme gruvbox8
 endif
 
