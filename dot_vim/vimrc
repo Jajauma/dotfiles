@@ -1,7 +1,3 @@
-if &compatible
-  set nocompatible
-endif
-
 let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 " Relocate state files to persistent directory
