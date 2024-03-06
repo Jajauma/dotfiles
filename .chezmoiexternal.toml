@@ -18,8 +18,8 @@ stripComponents = 1
 
 [".vim/pack/tools/start/vim-fugitive"]
 type = "archive"
-url = "https://github.com/tpope/vim-fugitive/archive/2e88f14a585c014691904ba8fe39e6ea851c9422.zip"
-checksum.sha256 = "C109A7B7DFBA123389F449400569F7BA139108290F360BC55D0A9B46484481B1"
+url = "https://github.com/tpope/vim-fugitive/archive/41beedabc7e948c787ea5696e04c3544c3674e23.zip"
+checksum.sha256 = "4C49C7B3394F9D7E8523716567D2A60CF4E3A5CA503EFF02C62B4B92229A1D40"
 stripComponents = 1
 
 [".vim/pack/tools/opt/vim-clang-format"]
