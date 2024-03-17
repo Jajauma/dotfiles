@@ -12,3 +12,7 @@ command-line functionality, e.g.:
 py -m pip install --user pyreadline3
 """
         )
+
+
+def dpi(pw: int, ph: int, idiag: float) -> float:
+    return math.sqrt(pw * pw + ph * ph) / idiag
