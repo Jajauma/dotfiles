@@ -1,9 +1,8 @@
-let s:vimfiles_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
-
-" Relocate state files to persistent directory
-let s:tmp_path = glob(s:vimfiles_path . '/tmp')
-let &viminfo .= ',n' . s:tmp_path . '/viminfo'
-let &directory = s:tmp_path . '//'
+" move state files to one directory
+let s:vimfiles_path = resolve(expand('<sfile>:p:h'))
+let s:tmp_path = fnamemodify(s:vimfiles_path, ':p') .. 'tmp'
+let &viminfofile = fnamemodify(s:tmp_path, ':p') .. 'viminfo'
+let &directory = s:tmp_path .. '//'
 
 if &t_Co > 2 || has('gui_running')
   syntax on
