@@ -12,14 +12,14 @@ stripComponents = 1
 
 [".vim/pack/tools/start/vim-commentary"]
 type = "archive"
-url = "https://github.com/tpope/vim-commentary/archive/f67e3e67ea516755005e6cccb178bc8439c6d402.zip"
-checksum.sha256 = "076CA240EBA7A5240871934000AE2E16ED4DC4C0CEC7731353ADFBD5F9DF41F2"
+url = "https://github.com/tpope/vim-commentary/archive/c4b8f52cbb7142ec239494e5a2c4a512f92c4d07.zip"
+checksum.sha256 = "158980BC79A2622FE543081CC1867C87B6DD8490A9769D8342D003AEFF6E1414"
 stripComponents = 1
 
 [".vim/pack/tools/start/vim-fugitive"]
 type = "archive"
-url = "https://github.com/tpope/vim-fugitive/archive/41beedabc7e948c787ea5696e04c3544c3674e23.zip"
-checksum.sha256 = "4C49C7B3394F9D7E8523716567D2A60CF4E3A5CA503EFF02C62B4B92229A1D40"
+url = "https://github.com/tpope/vim-fugitive/archive/dac8e5c2d85926df92672bf2afb4fc48656d96c7.zip"
+checksum.sha256 = "73262B3F8345BC2EE1706D9696697CBE3A4F5EE37FE01A2A736123255472EA53"
 stripComponents = 1
 
 [".vim/pack/tools/opt/vim-clang-format"]
