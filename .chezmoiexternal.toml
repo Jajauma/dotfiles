@@ -22,6 +22,12 @@ url = "https://github.com/tpope/vim-fugitive/archive/dac8e5c2d85926df92672bf2afb
 checksum.sha256 = "73262B3F8345BC2EE1706D9696697CBE3A4F5EE37FE01A2A736123255472EA53"
 stripComponents = 1
 
+[".vim/pack/tools/start/scratch.vim"]
+type = "archive"
+url = "https://github.com/vim-scripts/scratch.vim/archive/90c2bc4bfe01151aa5c71d9cb243b05bc105ae01.zip"
+checksum.sha256 = "2A9C78991A04860B876246872A767870B546BF5EF2645CB39DEBE788E334C09E"
+stripComponents = 1
+
 [".vim/pack/tools/opt/vim-clang-format"]
 type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
