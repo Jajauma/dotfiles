@@ -30,6 +30,12 @@ set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
 set ttyfast
 set visualbell t_vb=
 
+if has('langmap')
+  let &langmap = 'ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,' .
+        \'фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz,' .
+        \'Ё~ё`№#\;$Х{Ъ}Ж:Э"Б<Ю>'
+endif
+
 " use forward slash for path separator
 if has('win32') && exists('+shellslash')
   set shellslash
