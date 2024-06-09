@@ -12,7 +12,7 @@ set guioptions+=!
 set t_vb=
 
 if v:servername == 'FAR'
-  colorscheme far
+  colorscheme blue
 else
   if strftime('%H') >= 8 && strftime('%H') < 21
     set background=light

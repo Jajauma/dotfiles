@@ -4,12 +4,6 @@ url = "https://github.com/lifepillar/vim-gruvbox8/archive/d1cf31e5215ad6f5544d9e
 checksum.sha256 = "9CB7AA921E4E63147CB954F0383BF9EF681427002EF16FBC5193C91BB8F0FE04"
 stripComponents = 1
 
-[".vim/pack/colors/start/far"]
-type = "archive"
-url = "https://github.com/lycuid/vim-far/archive/af3b69f607a69acc9ca46682e198985c513f76c7.tar.gz"
-checksum.sha256 = "fefcda2cec247d0c4afc2b5e06ebfe681a51f83f22a3e268b28d4966ea3a2fbc"
-stripComponents = 1
-
 [".vim/pack/tools/start/vim-commentary"]
 type = "archive"
 url = "https://github.com/tpope/vim-commentary/archive/c4b8f52cbb7142ec239494e5a2c4a512f92c4d07.zip"
