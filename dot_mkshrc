@@ -1,14 +1,14 @@
 __format_ps1_cwd() {
-    case $PWD in
-        "$HOME") echo '~' ;;
-        /) echo / ;;
-        *) echo ${PWD##*/} ;;
-    esac
+  case $PWD in
+    "$HOME") echo '~' ;;
+    /) echo / ;;
+    *) echo ${PWD##*/} ;;
+  esac
 }
 
 __format_ps1_last_error() {
-    local last_error=$?
-    [[ $last_error -ne 0 ]] && echo " ($last_error)"
+  local last_error=$?
+  [[ $last_error -ne 0 ]] && echo " ($last_error)"
 }
 
 HISTFILE=$HOME/.mksh_history
@@ -17,4 +17,4 @@ PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error)]\$ "
 
 bind '^L=clear-screen'
 
-# vim: set filetype=bash:
+# vim: set filetype=sh:

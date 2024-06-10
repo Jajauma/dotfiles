@@ -1,8 +1,8 @@
 append_path() {
-    case ":${PATH:=$1}:" in
-        *:"$1":*) ;;
-        *) PATH="$PATH:$1" ;;
-    esac;
+  case ":${PATH:=$1}:" in
+    *:"$1":*) ;;
+    *) PATH="$PATH:$1" ;;
+  esac;
 }
 
 [ -d "$HOME/.local/bin" ] && append_path "$HOME/.local/bin"
@@ -20,11 +20,15 @@ export HGEDITOR=$EDITOR
 export VISUAL=$EDITOR
 export PYTHONSTARTUP=$HOME/Documents/python_startup.py
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
 if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
+  if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+  fi
+elif [ -n "$KSH_VERSION" ]; then
+elif [ -n "$ZSH_VERSION" ]; then
+else
+  # assume plain /bin/sh
+  export ENV=$HOME/.shrc
 fi
+
+# vim: set filetype=sh:
