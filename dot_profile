@@ -5,6 +5,8 @@ append_path() {
   esac;
 }
 
+[ -d /usr/X11R7/bin ] && append_path /usr/X11R7/bin
+[ -d /usr/games ] && append_path /usr/games
 [ -d "$HOME/.local/bin" ] && append_path "$HOME/.local/bin"
 [ -d "$HOME/.cargo/bin" ] && append_path "$HOME/.cargo/bin"
 
