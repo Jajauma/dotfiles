@@ -63,8 +63,6 @@ if has('terminal')
   endif
 endif
 
-" reset search highlight
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " saner search (n always jumps forward, N always jump backwards)
 nnoremap <expr> n 'Nn'[v:searchforward]
 nnoremap <expr> N 'nN'[v:searchforward]
