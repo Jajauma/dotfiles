@@ -1,5 +1,5 @@
 __format_ps1_cwd() {
-  case $PWD in
+  case "$PWD" in
     "$HOME") echo '~' ;;
     /) echo / ;;
     *) echo ${PWD##*/} ;;
@@ -12,13 +12,29 @@ __format_ps1_last_error() {
   fi
 }
 
-# interactive mode settings go here
-case "$-" in *i*)
-  set -o emacs
-  set -o tabcomplete
-  set -o promptcmds
-  PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]\$ "
-  ;;
-esac
+__is_interactive() {
+  case "$-" in
+    *i*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+if __is_interactive; then
+  if [ -n "$NETBSD_SHELL" ]; then
+      set -o emacs
+      set -o tabcomplete
+      set -o promptcmds
+      PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]\$ "
+  elif [ -n "$KSH_VERSION" ]; then
+      if [[ $KSH_VERSION = *MIRBSD* ]]; then
+        HISTFILE=$HOME/.mksh_history
+        bind '^L=clear-screen'
+      else
+        HISTFILE=$HOME/.ksh_history
+      fi
+      HISTSIZE=65535
+      PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]\$ "
+  fi
+fi
 
 # vim: set filetype=sh:
