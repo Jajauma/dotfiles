@@ -11,14 +11,16 @@ set guioptions-=m
 set guioptions+=!
 set t_vb=
 
+if strftime('%H') >= 8 && strftime('%H') < 21
+  set background=light
+else
+  set background=dark
+endif
 if v:servername == 'FAR'
   colorscheme blue
+elseif v:servername == 'TCMD'
+  colorscheme wildcharm
 else
-  if strftime('%H') >= 8 && strftime('%H') < 21
-    set background=light
-  else
-    set background=dark
-  endif
   let g:gruvbox_italicize_strings = 0
   let g:gruvbox_italics = 0
   colorscheme gruvbox8
