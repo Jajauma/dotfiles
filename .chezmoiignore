@@ -15,6 +15,7 @@ dot_minttyrc
 vimfiles
 # ignore most of the applications for root account
 {{- if eq .chezmoi.uid "0" }}
+.config/profanity
 .fonts
 .termux
 .vim
