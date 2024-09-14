@@ -12,6 +12,14 @@ __format_ps1_last_error() {
   fi
 }
 
+__format_ps1_prompt_sign() {
+  if [ $(id -u) -eq 0 ]; then
+    echo '#'
+  else
+    echo '$'
+  fi
+}
+
 __is_interactive() {
   case "$-" in
     *i*) return 0 ;;
@@ -24,7 +32,6 @@ if __is_interactive; then
       set -o emacs
       set -o tabcomplete
       set -o promptcmds
-      PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]\$ "
   elif [ -n "$KSH_VERSION" ]; then
       if [[ $KSH_VERSION = *MIRBSD* ]]; then
         HISTFILE=$HOME/.mksh_history
@@ -33,8 +40,10 @@ if __is_interactive; then
         HISTFILE=$HOME/.ksh_history
       fi
       HISTSIZE=65535
-      PS1="[$my_user@$my_hostname \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]\$ "
   fi
+  PS1="[$my_user@$my_hostname"
+  PS1="$PS1 \$(__format_ps1_cwd)\$(__format_ps1_last_error \$?)]"
+  PS1="$PS1\$(__format_ps1_prompt_sign) "
 fi
 
 # vim: set filetype=sh:

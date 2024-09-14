@@ -1,10 +1,24 @@
+# https://www.chezmoi.io/reference/special-files-and-directories/chezmoiignore/
+
+# common files
 README.md
+
 {{- if eq .chezmoi.os "windows" }}
+# ignore *nix applications
 .tmux.conf
 {{- else }}
+# ignore Windows applications
+.minttyrc
 AppData
 Documents/FarManager
 Documents/PowerShell
-dot_minttyrc
 vimfiles
+# ignore most of the applications for root account
+{{- if eq .chezmoi.uid "0" }}
+.config/profanity
+.fonts
+.termux
+.vim
+Documents
+{{- end }}
 {{- end }}

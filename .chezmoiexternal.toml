@@ -1,3 +1,7 @@
+# https://www.chezmoi.io/reference/special-files-and-directories/chezmoiexternal-format/
+
+{{- if ne .chezmoi.uid "0" }}
+
 [".vim/pack/colors/start/gruvbox8"]
 type = "archive"
 url = "https://github.com/lifepillar/vim-gruvbox8/archive/d1cf31e5215ad6f5544d9e631383aef4b6c35cb7.zip"
@@ -33,3 +37,5 @@ type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
 checksum.sha256 = "864ff2ede3b5f4f4935c86d2c5082ae80992c433321005940c4d3da8f42b92e9"
 stripComponents = 1
+
+{{- end }}

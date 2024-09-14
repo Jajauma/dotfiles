@@ -6,6 +6,6 @@ __format_ps1_last_error() {
   local last_error=$?
   [[ $last_error -ne 0 ]] && echo " ($last_error)"
 }
-PS1="[$my_user@$my_hostname \W\$(__format_ps1_last_error)]\$ "
+PS1="[$my_user@$my_hostname \W\$(__format_ps1_last_error)]"'\$ '
 
 # vim: set filetype=sh:
