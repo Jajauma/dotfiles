@@ -8,10 +8,10 @@ README.md
 .tmux.conf
 {{- else }}
 # ignore Windows applications
+.minttyrc
 AppData
 Documents/FarManager
 Documents/PowerShell
-dot_minttyrc
 vimfiles
 # ignore most of the applications for root account
 {{- if eq .chezmoi.uid "0" }}
