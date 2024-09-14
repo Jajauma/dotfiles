@@ -13,7 +13,7 @@ __format_ps1_last_error() {
 }
 
 __format_ps1_prompt_symbols() {
-  if [ $(uid -u) -eq 0 ]; then
+  if [ $(id -u) -eq 0 ]; then
     echo '# '
   else
     echo '$ '
