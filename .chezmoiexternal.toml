@@ -14,12 +14,6 @@ url = "https://github.com/tpope/vim-commentary/archive/c4b8f52cbb7142ec239494e5a
 checksum.sha256 = "158980BC79A2622FE543081CC1867C87B6DD8490A9769D8342D003AEFF6E1414"
 stripComponents = 1
 
-[".vim/pack/tools/start/vim-fugitive"]
-type = "archive"
-url = "https://github.com/tpope/vim-fugitive/archive/dac8e5c2d85926df92672bf2afb4fc48656d96c7.zip"
-checksum.sha256 = "73262B3F8345BC2EE1706D9696697CBE3A4F5EE37FE01A2A736123255472EA53"
-stripComponents = 1
-
 [".vim/pack/tools/start/scratch.vim"]
 type = "archive"
 url = "https://github.com/vim-scripts/scratch.vim/archive/90c2bc4bfe01151aa5c71d9cb243b05bc105ae01.zip"
