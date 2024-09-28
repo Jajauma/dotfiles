@@ -1,5 +1,13 @@
 # https://www.chezmoi.io/reference/special-files-and-directories/chezmoiexternal-format/
 
+{{- if eq .chezmoi.os "windows" }}
+
+["Documents/Python/pyreadline3.zip"]
+type = "file"
+url = "https://files.pythonhosted.org/packages/5a/dc/491b7661614ab97483abf2056be1deee4dc2490ecbf7bff9ab5cdbac86e1/pyreadline3-3.5.4-py3-none-any.whl"
+checksum.sha256 = "EAF8E6CC3C49BCCCF145FC6067BA8643D1DF34D604A1EC0ECCBF7A18E6D3FAE6"
+
+{{- end }}
 {{- if ne .chezmoi.uid "0" }}
 
 [".vim/pack/colors/start/gruvbox8"]

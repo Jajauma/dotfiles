@@ -27,7 +27,7 @@ export EDITOR=vim
 export HGEDITOR=$EDITOR
 export VISUAL=$EDITOR
 if [ $(id -u) -ne 0 ]; then
-  export PYTHONSTARTUP=$HOME/Documents/python_startup.py
+  export PYTHONSTARTUP=$HOME/Documents/Python/python_startup.py
 fi
 
 if [ -n "$BASH_VERSION" ]; then
