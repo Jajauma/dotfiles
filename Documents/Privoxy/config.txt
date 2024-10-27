@@ -4,6 +4,7 @@ actionsfile match-all.action
 actionsfile default.action
 actionsfile user.action
 filterfile default.filter
+filterfile user.filter
 logfile privoxy.log
 debug 1024
 listen-address 127.0.0.1:8118
