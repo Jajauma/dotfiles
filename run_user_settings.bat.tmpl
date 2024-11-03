@@ -5,5 +5,8 @@ setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
 setx POWERSHELL_UPDATECHECK Off >nul
 setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py >nul
 
+powershell -NoProfile -ExecutionPolicy Bypass ^
+  -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
+
 rem vim:ft=dosbatch:
 {{ end -}}
