@@ -41,6 +41,12 @@ url = "https://github.com/romainl/vim-cool/archive/662e7b11064cbeedad17c45d2fe92
 checksum.sha256 = "30E72316B7CD62459693783496864EE4A4FF7C5BA7AFC47C37951990BDCAE2D6"
 stripComponents = 1
 
+[".vim/pack/tools/start/vim-fugitive"]
+type = "archive"
+url = "https://github.com/tpope/vim-fugitive/archive/174230d6a7f2df94705a7ffd8d5413e27ec10a80.zip"
+checksum.sha256 = "C77B42A1A92D01D643BCD2E854D61C407B2EFCFE9065992E4B30C6647FCC2C6E"
+stripComponents = 1
+
 [".vim/pack/tools/opt/vim-clang-format"]
 type = "archive"
 url = "https://github.com/rhysd/vim-clang-format/archive/6b791825ff478061ad1c57b21bb1ed5a5fd0eb29.tar.gz"
