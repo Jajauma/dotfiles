@@ -9,8 +9,8 @@ checksum.sha256 = "EAF8E6CC3C49BCCCF145FC6067BA8643D1DF34D604A1EC0ECCBF7A18E6D3F
 
 ["Documents/Privoxy"]
 type = "archive"
-url = "https://www.privoxy.org/sf-download-mirror/Win32/3.0.34%20%28stable%29/privoxy_3.0.34.zip"
-checksum.sha256 = "0E361E54780E292F7A249752471B9C55AF7BD342FD345CD2D0F3EC2BBE7650A4"
+url = "https://www.privoxy.org/sf-download-mirror/Win32/4.0.0%20%28stable%29/privoxy_4.0.0.zip"
+checksum.sha256 = "E32C674DEC1276E8B6E1C09EEB9FBEC2DCB1C129CDA7570E04AA043EF0111C39"
 stripComponents = 1
 exclude = ["*/config.txt", "*/user.action"]
 
