@@ -19,14 +19,14 @@ exclude = ["*/config.txt", "*/user.action"]
 
 [".vim/pack/colors/start/gruvbox8"]
 type = "archive"
-url = "https://github.com/lifepillar/vim-gruvbox8/archive/d1cf31e5215ad6f5544d9e631383aef4b6c35cb7.zip"
-checksum.sha256 = "9CB7AA921E4E63147CB954F0383BF9EF681427002EF16FBC5193C91BB8F0FE04"
+url = "https://github.com/lifepillar/vim-gruvbox8/archive/60bb03df34fd6f22aed9dcb71f5cb297b6cceb3f.zip"
+checksum.sha256 = "ED005CBFFD97CA83533D21C49F23682FC29D5B6B4D48F37A74174F3E8B1389CC"
 stripComponents = 1
 
 [".vim/pack/tools/start/vim-commentary"]
 type = "archive"
-url = "https://github.com/tpope/vim-commentary/archive/c4b8f52cbb7142ec239494e5a2c4a512f92c4d07.zip"
-checksum.sha256 = "158980BC79A2622FE543081CC1867C87B6DD8490A9769D8342D003AEFF6E1414"
+url = "https://github.com/tpope/vim-commentary/archive/64a654ef4a20db1727938338310209b6a63f60c9.zip"
+checksum.sha256 = "EBDC68C5FBD5742A9E3223B2D5EB73D4C4C6046B7C0D279CC619177C13E914E3"
 stripComponents = 1
 
 [".vim/pack/tools/start/scratch.vim"]
@@ -43,8 +43,8 @@ stripComponents = 1
 
 [".vim/pack/tools/start/vim-fugitive"]
 type = "archive"
-url = "https://github.com/tpope/vim-fugitive/archive/174230d6a7f2df94705a7ffd8d5413e27ec10a80.zip"
-checksum.sha256 = "C77B42A1A92D01D643BCD2E854D61C407B2EFCFE9065992E4B30C6647FCC2C6E"
+url = "https://github.com/tpope/vim-fugitive/archive/b068eaf1e6cbe35d1ac100d435cd7f7b74a5c87d.zip"
+checksum.sha256 = "D9CEAA3CCCE4F564D0FF62B2CE70FB3F38E25C11AEDB01C09960B707AE8EF070"
 stripComponents = 1
 
 [".vim/pack/tools/opt/vim-clang-format"]
