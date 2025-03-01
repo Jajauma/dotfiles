@@ -28,6 +28,7 @@ set shortmess-=S
 set showcmd
 set statusline=%<%n\ %F\ %y%m%r%=%-14.(%l,%c%V%)\ %P
 set ttyfast
+set viminfo='20,<50,s10,h
 set visualbell t_vb=
 
 " use forward slash for path separator
