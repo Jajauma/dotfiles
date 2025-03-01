@@ -41,6 +41,12 @@ url = "https://github.com/romainl/vim-cool/archive/662e7b11064cbeedad17c45d2fe92
 checksum.sha256 = "30E72316B7CD62459693783496864EE4A4FF7C5BA7AFC47C37951990BDCAE2D6"
 stripComponents = 1
 
+[".vim/pack/tools/start/vim-qf"]
+type = "archive"
+url = "https://github.com/romainl/vim-qf/archive/1dcedfc42c017fd99477bcf36fb1f41e95809800.zip"
+checksum.sha256 = "A79D2F50E19FB1060625A48E1FE4F19D795C04CEA6F6D2B21E5D2EF7BE24F7D2"
+stripComponents = 1
+
 [".vim/pack/tools/start/vim-fugitive"]
 type = "archive"
 url = "https://github.com/tpope/vim-fugitive/archive/b068eaf1e6cbe35d1ac100d435cd7f7b74a5c87d.zip"
