@@ -72,3 +72,11 @@ cnoreabbrev E e
 
 " insert directory of the current file in the command line
 cnoremap <expr> <C-H> functions#GetParentDirPrompt()
+
+" workaround for gx (which went unusable at some point)
+if has('win32')
+  let g:nogx = 1
+  let g:netrw_nogx = 1
+  nnoremap <silent> gx :call functions#OpenUrl(mode())<CR>
+  vnoremap <silent> gx :<c-u>call functions#OpenUrl(visualmode())<cr>
+endif
