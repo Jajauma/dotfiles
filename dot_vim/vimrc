@@ -63,12 +63,17 @@ nnoremap <expr> n 'Nn'[v:searchforward]
 nnoremap <expr> N 'nN'[v:searchforward]
 " quick save
 nnoremap <silent> <F2> :update<CR>
+" go to previously edited files
+nnoremap <F4> :browse oldfiles<CR>
 " quickfix navigation
 nnoremap <F6> <Plug>(qf_qf_toggle_stay)
 nnoremap <F7> :cprevious<CR>
 nnoremap <F8> :cnext<CR>
 " fix accidental :E to be :e
 cnoreabbrev E e
+" unmap F1 (never used for its intended purpose)
+noremap <F1> <nop>
+noremap! <F1> <nop>
 
 " insert directory of the current file in the command line
 cnoremap <expr> <C-H> functions#GetParentDirPrompt()
