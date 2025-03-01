@@ -17,12 +17,12 @@ function! functions#WipeBuffersWithoutFiles()
   endif
 endfunction
 
-func functions#SendToTerm(what)
+function! functions#SendToTerm(what)
   call term_sendkeys('', a:what)
   return ''
 endfunc
 
-func functions#ExtractUrl(from)
+function! functions#ExtractUrl(from)
   return matchstr(
         \ a:from,
         \ '\%(\%(http\|ftp\|irc\)s\?\|file\)://\S\{-}\ze[^A-Za-z0-9/]*$')
