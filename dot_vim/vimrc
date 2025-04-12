@@ -19,7 +19,7 @@ set hlsearch
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:»\ ,trail:·
+set listchars=tab:▸·,trail:·
 set modeline
 set noesckeys " possibly helps with slow leave from insert mode
 set nowrapscan
