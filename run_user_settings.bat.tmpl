@@ -10,7 +10,7 @@ rem   -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
 
 <%APPDATA%\GHISLER\wincmd.ini chezmoi execute-template ^
   --with-stdin ^
-  --file {{ joinPath .chezmoi.sourceDir "/.chezmoitemplates/wincmd_ini" }} ^
+  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/wincmd_ini" }} ^
   --output %APPDATA%\GHISLER\wincmd.ini.new
 move /y %APPDATA%\GHISLER\wincmd.ini.new %APPDATA%\GHISLER\wincmd.ini >nul
 
