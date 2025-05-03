@@ -8,10 +8,11 @@ setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py >nul
 rem powershell -NoProfile -ExecutionPolicy Bypass ^
 rem   -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
 
-type %APPDATA%\GHISLER\wincmd.ini | chezmoi execute-template ^
+<%APPDATA%\GHISLER\wincmd.ini chezmoi execute-template ^
   --with-stdin ^
   --file {{ joinPath .chezmoi.sourceDir "/.chezmoitemplates/wincmd_ini" }} ^
-  --output %APPDATA%\GHISLER\wincmd.ini
+  --output %APPDATA%\GHISLER\wincmd.ini.new
+move /y %APPDATA%\GHISLER\wincmd.ini.new %APPDATA%\GHISLER\wincmd.ini >nul
 
 rem vim:ft=dosbatch:
 {{ end -}}
