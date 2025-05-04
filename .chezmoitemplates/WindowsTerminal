@@ -5,6 +5,5 @@
   | setValueAtPath "profiles.defaults.cursorShape" "filledBox"
   | setValueAtPath "profiles.defaults.font.face" "Consolas"
   | setValueAtPath "profiles.defaults.scrollbarState" "hidden"
-  | setValueAtPath "showTabsInTitlebar" false
   | setValueAtPath "theme" "system"
   | toPrettyJson }}
