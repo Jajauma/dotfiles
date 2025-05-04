@@ -14,5 +14,14 @@ rem   -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
   --output %APPDATA%\GHISLER\wincmd.ini.new
 move /y %APPDATA%\GHISLER\wincmd.ini.new %APPDATA%\GHISLER\wincmd.ini >nul
 
+<%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ^
+chezmoi execute-template ^
+  --with-stdin ^
+  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/WindowsTerminal" }} ^
+  --output %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.new
+move /y ^
+  %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.new ^
+  %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json >nul
+
 rem vim:ft=dosbatch:
 {{ end -}}
