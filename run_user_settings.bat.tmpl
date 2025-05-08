@@ -23,5 +23,13 @@ move /y ^
   %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.new ^
   %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json >nul
 
+pushd %APPDATA%\Mozilla\SeaMonkey\Profiles\Clean && rd /s /q . 2>nul && popd
+
+<%APPDATA%\Mozilla\SeaMonkey\profiles.ini chezmoi execute-template ^
+  --with-stdin ^
+  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/profiles_ini" }} ^
+  --output %APPDATA%\Mozilla\SeaMonkey\profiles.ini.new
+move /y %APPDATA%\Mozilla\SeaMonkey\profiles.ini.new %APPDATA%\Mozilla\SeaMonkey\profiles.ini >nul
+
 rem vim:ft=dosbatch:
 {{ end -}}
