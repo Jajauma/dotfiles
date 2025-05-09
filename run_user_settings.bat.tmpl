@@ -8,28 +8,23 @@ setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py >nul
 rem powershell -NoProfile -ExecutionPolicy Bypass ^
 rem   -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
 
-<%APPDATA%\GHISLER\wincmd.ini chezmoi execute-template ^
-  --with-stdin ^
-  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/wincmd_ini" }} ^
-  --output %APPDATA%\GHISLER\wincmd.ini.new
-move /y %APPDATA%\GHISLER\wincmd.ini.new %APPDATA%\GHISLER\wincmd.ini >nul
-
-<%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ^
-chezmoi execute-template ^
-  --with-stdin ^
-  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/WindowsTerminal" }} ^
-  --output %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.new
-move /y ^
-  %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.new ^
-  %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json >nul
+call :render_template ^
+  "%APPDATA%\GHISLER\wincmd.ini" ^
+  {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/wincmd_ini" }}
+call :render_template ^
+  "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" ^
+  {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/WindowsTerminal" }}
 
 pushd %APPDATA%\Mozilla\SeaMonkey\Profiles\Clean && rd /s /q . 2>nul && popd
+call :render_template ^
+  "%APPDATA%\Mozilla\SeaMonkey\profiles.ini" ^
+  {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/profiles_ini" }}
+goto :eof
 
-<%APPDATA%\Mozilla\SeaMonkey\profiles.ini chezmoi execute-template ^
-  --with-stdin ^
-  --file {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/profiles_ini" }} ^
-  --output %APPDATA%\Mozilla\SeaMonkey\profiles.ini.new
-move /y %APPDATA%\Mozilla\SeaMonkey\profiles.ini.new %APPDATA%\Mozilla\SeaMonkey\profiles.ini >nul
+:render_template
+type %1 | chezmoi execute-template --with-stdin --file %2 --output %1.new
+move /y %1.new %1 >nul
+goto :eof
 
 rem vim:ft=dosbatch:
 {{ end -}}
