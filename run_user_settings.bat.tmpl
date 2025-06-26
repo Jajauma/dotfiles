@@ -5,9 +5,6 @@ setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
 setx POWERSHELL_UPDATECHECK Off >nul
 setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py >nul
 
-rem powershell -NoProfile -ExecutionPolicy Bypass ^
-rem   -File %USERPROFILE%\Documents\Privoxy\startup_shortcut.ps1
-
 call :render_template ^
   "%APPDATA%\GHISLER\wincmd.ini" ^
   {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/wincmd_ini" }}
