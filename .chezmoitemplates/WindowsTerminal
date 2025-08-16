@@ -27,6 +27,7 @@
   | setValueAtPath "profiles.defaults.colorScheme" "Desert"
   | setValueAtPath "profiles.defaults.cursorShape" "filledBox"
   | setValueAtPath "profiles.defaults.font.face" "Consolas"
+  | setValueAtPath "profiles.defaults.font.size" 11
   | setValueAtPath "profiles.defaults.scrollbarState" "hidden"
   | setValueAtPath "schemes" $schemes
   | setValueAtPath "showTabsInTitlebar" false
