@@ -14,7 +14,6 @@ set encoding=utf8
 set expandtab shiftwidth=2
 set fileformats=unix,dos
 set formatoptions=tcqj
-set history=10000
 set hlsearch
 set incsearch
 set laststatus=2
