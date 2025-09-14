@@ -21,10 +21,6 @@ call :render_template ^
   "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" ^
   {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/WindowsTerminal" }}
 
-pushd %APPDATA%\Mozilla\SeaMonkey\Profiles\Clean && rd /s /q . 2>nul && popd
-call :render_template ^
-  "%APPDATA%\Mozilla\SeaMonkey\profiles.ini" ^
-  {{ joinPath .chezmoi.sourceDir ".chezmoitemplates/profiles_ini" }}
 goto :eof
 
 :render_template
