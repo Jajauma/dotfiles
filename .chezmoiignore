@@ -6,6 +6,7 @@ README.md
 {{- if eq .chezmoi.os "windows" }}
 # ignore *nix applications and data
 .fonts/consol*.ttf
+.termux
 .tmux.conf
 {{- else }}
 # ignore Windows applications
