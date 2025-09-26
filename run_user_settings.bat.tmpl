@@ -24,7 +24,7 @@ call :render_template ^
 goto :eof
 
 :render_template
-type %1 | chezmoi execute-template --with-stdin --file %2 --output %1.new
+type %1 | "{{ .chezmoi.executable }}" execute-template --with-stdin --file %2 --output %1.new
 move /y %1.new %1 >nul
 goto :eof
 
