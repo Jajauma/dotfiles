@@ -22,9 +22,9 @@
   | setValueAtPath "cursorColor" "#00ff00")) -}}
 {{- fromJson .chezmoi.stdin
   | setValueAtPath "alwaysShowTabs" false
-  | setValueAtPath "defaultProfile" "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
+  | setValueAtPath "defaultProfile" "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}"
   | setValueAtPath "disableAnimations" true
-  | setValueAtPath "profiles.defaults.colorScheme" "Desert"
+  | setValueAtPath "profiles.defaults.colorScheme" "One Half Dark"
   | setValueAtPath "profiles.defaults.cursorShape" "filledBox"
   | setValueAtPath "profiles.defaults.font.face" "Consolas"
   | setValueAtPath "profiles.defaults.font.size" 11
