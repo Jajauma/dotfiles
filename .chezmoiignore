@@ -14,6 +14,7 @@ README.md
 AppData
 Documents/FarManager
 Documents/PowerShell
+Documents/WindowsPowerShell
 vimfiles
 # ignore most of the applications for root account
 {{- if eq .chezmoi.uid "0" }}
