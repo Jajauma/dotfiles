@@ -49,3 +49,21 @@ function! functions#OpenUrl(mode)
   endif
   let @@ = saved_unnamed_register
 endfunction
+
+function! functions#CommaSort(text)
+  return join(sort(split(a:text, ',')), ',')
+endfunction
+
+function! functions#CommaSortOperator(type)
+  let saved_unnamed_register = @@
+  if a:type ==# 'v'
+    execute "normal! `<v`>y"
+    execute "normal! `<v`>c" .. functions#CommaSort(@@)
+  elseif a:type ==# 'char'
+    execute "normal! `[v`]y"
+    execute "normal! `[v`]c" .. functions#CommaSort(@@)
+  else
+    return
+  endif
+  let @@ = saved_unnamed_register
+endfunction

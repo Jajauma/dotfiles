@@ -84,3 +84,7 @@ if has('win32')
   nnoremap <silent> gx :call functions#OpenUrl(mode())<CR>
   vnoremap <silent> gx :<c-u>call functions#OpenUrl(visualmode())<cr>
 endif
+
+" sort words separated by commas
+nnoremap <leader>s :set operatorfunc=functions#CommaSortOperator<cr>g@
+vnoremap <leader>s :<c-u>call functions#CommaSortOperator(visualmode())<cr>
