@@ -18,7 +18,7 @@
   | setValueAtPath "Configuration.DirTabLimit" "32"
   | setValueAtPath "Configuration.DirTabOptions" "824"
   | setValueAtPath "Configuration.DirTabRevert" "1"
-  | setValueAtPath "Configuration.Editor" "%ProgramFiles%\\Vim\\vim91\\gvim.exe --servername TCMD --remote-silent"
+  | setValueAtPath "Configuration.Editor" "%ProgramFiles%\\Vim\\vim92\\gvim.exe --servername TCMD --remote-silent"
   | setValueAtPath "Configuration.EverythingForSize" "0"
   | setValueAtPath "Configuration.ExplorerForCopy" "0"
   | setValueAtPath "Configuration.FileTipWindows" "0"
