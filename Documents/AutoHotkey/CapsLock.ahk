@@ -4,10 +4,10 @@
 SetCapsLockState("AlwaysOff")
 
 ; CapsLock switches to US English (Language ID: 0x0409)
-CapsLock::SwitchToLang(0x0409)
+CapsLock Up::SwitchToLang(0x0409)
 
 ; Shift+CapsLock switches to Russian (Language ID: 0x0419)
-+CapsLock::SwitchToLang(0x0419)
++CapsLock Up::SwitchToLang(0x0419)
 
 ; Helper function to switch keyboard layouts
 SwitchToLang(Lang) {
