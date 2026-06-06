@@ -1,7 +1,7 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-SetTimer(CheckVMwareActive, 10000)
+SetTimer(CheckVMwareActive, 55000)
 CheckVMwareActive()
 
 CheckVMwareActive() {
