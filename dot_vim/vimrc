@@ -88,3 +88,7 @@ endif
 " sort words separated by commas
 nnoremap <leader>s :set operatorfunc=functions#CommaSortOperator<cr>g@
 vnoremap <leader>s :<c-u>call functions#CommaSortOperator(visualmode())<cr>
+
+" open fugitive status window
+nnoremap <leader>g :vert Git<CR>
+nnoremap <leader>G :Git<CR>
