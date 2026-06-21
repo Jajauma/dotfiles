@@ -2,10 +2,11 @@
 #SingleInstance Force
 
 ; Configure hotkeys to enable each layout separately. Doesn't work on the
-; desktop or in a Win+R window.
+; desktop or in a Win+R window. Also disable default Win+Space combo for now.
 SetCapsLockState("AlwaysOff")
 CapsLock Up::SwitchToLang(0x0409)  ; US English (Language ID: 0x0409)
 +CapsLock Up::SwitchToLang(0x0419) ; Russian (Language ID: 0x0419)
+#Space::Return
 
 SwitchToLang(Lang) {
   static WM_INPUTLANGCHANGEREQUEST := 0x50
