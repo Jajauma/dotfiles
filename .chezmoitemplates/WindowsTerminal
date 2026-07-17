@@ -32,4 +32,5 @@
   | setValueAtPath "schemes" $schemes
   | setValueAtPath "showTabsInTitlebar" false
   | setValueAtPath "theme" "system"
+  | setValueAtPath "windowingBehavior" "useExisting"
   | toPrettyJson -}}
