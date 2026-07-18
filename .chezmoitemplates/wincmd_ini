@@ -47,6 +47,8 @@
   | setValueAtPath "Configuration.ShowHiddenSystem" "0"
   | setValueAtPath "Configuration.ShowParentDirInRoot" "0"
   | setValueAtPath "Configuration.SingleClickStart" "0"
+  | setValueAtPath "Configuration.SizeFooter" "9"
+  | setValueAtPath "Configuration.SizeStyle" "9"
   | setValueAtPath "Configuration.Small83Names" "0"
   | setValueAtPath "Configuration.SortDirsByName" "1"
   | setValueAtPath "Configuration.SortUpper" "0"
