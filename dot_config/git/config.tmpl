@@ -8,7 +8,7 @@
 
 [core]
 {{- if eq .chezmoi.os "windows" }}
-	editor = gvim.bat --nofork --remote-wait-silent
+	editor = gvim --remote-wait-silent
 {{- else }}
 	editor = vim
 {{- end }}
