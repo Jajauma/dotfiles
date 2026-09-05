@@ -16,18 +16,18 @@ if "%user_path%" equ "!user_path:%local_bin%=!" (
     /d "%user_path%;%local_bin%" /f
 )
 
-setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
-setx POWERSHELL_UPDATECHECK Off >nul
-setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py >nul
+> nul setx POWERSHELL_TELEMETRY_OPTOUT 1
+> nul setx POWERSHELL_UPDATECHECK Off
+> nul setx PYTHONSTARTUP %USERPROFILE%\Documents\Python\python_startup.py
 
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Fonts" ^
+> nul reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Fonts" ^
   /v "IBM Plex Mono Medium (TrueType)" ^
   /t REG_SZ ^
-  /d "%USERPROFILE%\.fonts\IBMPlexMono-Medium.ttf" /f >nul
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Fonts" ^
+  /d "%USERPROFILE%\.fonts\IBMPlexMono-Medium.ttf" /f
+> nul reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Fonts" ^
   /v "IBM Plex Mono Medium Italic (TrueType)" ^
   /t REG_SZ ^
-  /d "%USERPROFILE%\.fonts\IBMPlexMono-MediumItalic.ttf" /f >nul
+  /d "%USERPROFILE%\.fonts\IBMPlexMono-MediumItalic.ttf" /f
 
 call :render_template ^
   "%APPDATA%\GHISLER\wincmd.ini" ^
@@ -39,9 +39,9 @@ call :render_template ^
 goto :eof
 
 :render_template
-type %1 | "{{ .chezmoi.executable }}" execute-template --with-stdin --file %2 --output %1.new
-move /y %1.new %1 >nul
-goto :eof
+  type %1 | "{{ .chezmoi.executable }}" execute-template --with-stdin --file %2 --output %1.new
+  > nul move /y %1.new %1
+  goto :eof
 
 rem vim:ft=dosbatch:
 {{ end -}}
