@@ -1,5 +1,20 @@
 {{ if eq .chezmoi.os "windows" -}}
 @echo off
+setlocal EnableExtensions EnableDelayedExpansion
+
+rem add ~/.local/bin to the user path portion (requires logoff to take effect)
+for /f "usebackq tokens=1,2*" %%i in (`reg query "HKCU\Environment" /v "Path"`) do (
+  if /i "%%i" equ "Path" (
+    set user_path=%%k
+  )
+)
+set local_bin=%%USERPROFILE%%\.local\bin
+if "%user_path%" equ "!user_path:%local_bin%=!" (
+  > nul reg add "HKCU\Environment" ^
+    /v "Path" ^
+    /t REG_EXPAND_SZ ^
+    /d "%user_path%;%local_bin%" /f
+)
 
 setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul
 setx POWERSHELL_UPDATECHECK Off >nul
