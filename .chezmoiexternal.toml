@@ -1,27 +1,6 @@
 # https://www.chezmoi.io/reference/special-files-and-directories/chezmoiexternal-format/
 
-{{- if eq .chezmoi.os "windows" }}
-
-[uv]
-type = "archive"
-url = "https://releases.astral.sh/github/uv/releases/download/0.11.32/uv-x86_64-pc-windows-msvc.zip"
-targetPath = ".local/bin"
-checksum.sha256 = "acfde570451cfdb8689fa159a138ee805ba4e241c466432750302c86254b0984"
-
-{{- end }}
-
 {{- if ne .chezmoi.uid "0" }}
-
-{{- if eq .chezmoi.os "linux" }}
-
-[uv]
-type = "archive"
-url = "https://releases.astral.sh/github/uv/releases/download/0.11.32/uv-x86_64-unknown-linux-gnu.tar.gz"
-targetPath = ".local/bin"
-checksum.sha256 = "aab924fd522efd06f1c5f3b93a243864fc453132c94b2dc49f1371b528a4b967"
-stripComponents = 1
-
-{{- end }}
 
 [".vim/pack/colors/start/gruvbox8"]
 type = "archive"
