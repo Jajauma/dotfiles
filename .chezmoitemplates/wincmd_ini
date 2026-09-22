@@ -2,6 +2,7 @@
   | setValueAtPath "ButtonbarCache.RedirectSection" "1"
   | setValueAtPath "Configuration.AltSearch" "1"
   | setValueAtPath "Configuration.AlternateUserIni" "wincmd_local.ini"
+  | setValueAtPath "Configuration.DarkMode" "1"
   | setValueAtPath "Configuration.DirBrackets" "0"
   | setValueAtPath "Configuration.Editor" "gvim --servername TCMD --remote-silent"
   | setValueAtPath "Configuration.FirstTime" "0"
