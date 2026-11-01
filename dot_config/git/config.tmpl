@@ -5,6 +5,7 @@
 [alias]
 	co = checkout
 	br = branch
+	utccommit = !TZ=UTC0 git commit
 
 [core]
 {{- if eq .chezmoi.os "windows" }}
